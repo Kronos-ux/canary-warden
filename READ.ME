@@ -1,0 +1,21 @@
+# canary-warden
+
+A simple tool to detect ransomware-like activity by watching "canary" files for suspicious changes.
+
+## Quick Start
+
+1. Install requirements:
+   pip install -r requirements.txt
+
+2. Run:
+   python -m src.canary_warden.cli --folders 2 --files 5 --threshold 8
+
+3. Try demo mode (simulates attacks!):
+   python -m src.canary_warden.cli --demo
+
+## What It Does
+
+- Makes folders and files for fake "decoys."
+- Watches if lots of things change really fast.
+- Says "Alert!" if it thinks an attack is happening.
+- Only for learning—never deletes or damages your files.
